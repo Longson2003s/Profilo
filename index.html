@@ -103,29 +103,7 @@
     .trust-row span { display: inline-flex; align-items: center; gap: 7px; }
     .check { color: var(--accent); font-weight: 900; }
     .hero-visual { position: relative; min-height: 390px; display: grid; place-items: center; }
-    .browser {
-      position: relative; z-index: 1; width: min(100%, 450px); padding: 12px; border: 1px solid var(--line);
-      border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); transform: rotate(2deg);
-    }
-    .browser-bar { display: flex; align-items: center; gap: 5px; padding: 2px 5px 11px; }
-    .browser-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff8276; }
-    .browser-dot:nth-child(2) { background: #ffc45c; }
-    .browser-dot:nth-child(3) { background: #55c995; }
-    .browser-address { height: 17px; flex: 1; margin-left: 7px; border-radius: 99px; background: var(--bg); }
-    .mock-page { min-height: 277px; padding: 22px; border-radius: 12px; background: linear-gradient(140deg, #e8efff, #f9fbff 72%); color: #20335c; overflow: hidden; }
-    .mock-nav { display: flex; justify-content: space-between; align-items: center; font-size: 9px; font-weight: 800; }
-    .mock-brand { width: 62px; height: 9px; border-radius: 8px; background: #4669bf; }
-    .mock-links { display: flex; gap: 8px; }
-    .mock-links i { width: 26px; height: 4px; border-radius: 5px; background: #a4b3d6; }
-    .mock-hero { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 14px; min-height: 205px; }
-    .mock-copy .line { height: 8px; margin: 9px 0; border-radius: 9px; background: #b9c8e8; }
-    .mock-copy .line:first-child { width: 98%; height: 15px; background: #4565af; }
-    .mock-copy .line:nth-child(2) { width: 80%; height: 13px; background: #7189c0; }
-    .mock-copy .line:nth-child(3) { width: 94%; }
-    .mock-copy .line:nth-child(4) { width: 72%; }
-    .mock-cta { width: 78px; height: 22px; margin-top: 15px; border-radius: 7px; background: #3864db; }
-    .mock-photo { display: grid; place-items: center; height: 145px; border-radius: 48% 48% 15px 15px; background: linear-gradient(140deg, #d0dcfa, #a9bce8); }
-    .mock-photo::after { width: 67px; height: 67px; border: 9px solid #f8faff; border-radius: 50%; background: #efc6a1; box-shadow: 0 35px 0 13px #f8faff; content: ""; }
+    .hero-preview { display: block; width: min(100%, 550px); height: auto; border-radius: 18px; box-shadow: var(--shadow); }
     .float-card { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 12px 15px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); font-size: .8rem; font-weight: 750; }
     .float-card strong { display: block; font-size: .96rem; }
     .float-card small { color: var(--muted); font-size: .7rem; font-weight: 600; }
@@ -152,23 +130,8 @@
     .process-step p { margin: 0; color: var(--muted); font-size: .8rem; }
     .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
     .work-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-    .work-preview { position: relative; display: grid; place-items: center; height: 205px; padding: 22px; overflow: hidden; background: linear-gradient(140deg, #e6edff, #cbd8f5); }
-    .work-card:nth-child(2) .work-preview { background: linear-gradient(140deg, #ffe8d9, #f3c7ad); }
-    .work-card:nth-child(3) .work-preview { background: linear-gradient(140deg, #ddf3e9, #b0dcc8); }
-    .work-card:nth-child(4) .work-preview { background: linear-gradient(140deg, #eee7ff, #d1c3f4); }
-    .work-card:nth-child(5) .work-preview { background: linear-gradient(140deg, #fff0c9, #f3d787); }
-    .work-card:nth-child(6) .work-preview { background: linear-gradient(140deg, #deeff5, #afd2df); }
-    .preview-window { width: 82%; height: 152px; padding: 12px; border: 1px solid rgba(30,50,90,.12); border-radius: 10px; background: rgba(255,255,255,.86); box-shadow: 0 10px 20px rgba(35,48,78,.1); transform: rotate(-2deg); }
-    .preview-head { display: flex; justify-content: space-between; align-items: center; height: 12px; }
-    .preview-logo { width: 45px; height: 6px; border-radius: 5px; background: #536fab; }
-    .preview-menu { display: flex; gap: 4px; }
-    .preview-menu i { width: 14px; height: 4px; border-radius: 5px; background: #c5cee0; }
-    .preview-hero { display: grid; grid-template-columns: 1fr .6fr; gap: 9px; align-items: center; height: 106px; }
-    .preview-lines i { display: block; width: 85%; height: 6px; margin: 6px 0; border-radius: 6px; background: #d2dced; }
-    .preview-lines i:first-child { width: 96%; height: 10px; background: #6077aa; }
-    .preview-lines i:nth-child(2) { width: 73%; }
-    .preview-blob { height: 66px; border-radius: 9px; background: linear-gradient(140deg, #dce6fa, #a9bce4); }
-    .replace-note { position: absolute; right: 9px; bottom: 8px; padding: 3px 7px; border-radius: 5px; color: #384765; background: rgba(255,255,255,.72); font-size: .64rem; font-weight: 700; }
+    .work-preview { height: 205px; overflow: hidden; background: var(--accent-soft); }
+    .work-preview img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
     .work-info { padding: 18px; }
     .work-info h3 { margin-bottom: 6px; font-size: 1rem; }
     .work-info p { margin-bottom: 12px; color: var(--muted); font-size: .82rem; }
@@ -249,17 +212,11 @@
       .hero-grid { grid-template-columns: 1fr; gap: 15px; }
       h1 { font-size: clamp(2.7rem, 12vw, 4.4rem); }
       .hero-visual { min-height: 320px; }
-      .browser { width: min(90%, 430px); }
-      .mock-page { min-height: 235px; }
-      .mock-hero { min-height: 175px; }
       .section { padding: 60px 0; }
       .service-grid, .pricing-grid, .review-grid { grid-template-columns: 1fr; }
       .service-card > p { min-height: 0; }
       .work-grid { grid-template-columns: repeat(2, 1fr); gap: 11px; }
-      .work-preview { height: 165px; padding: 14px; }
-      .preview-window { width: 96%; height: 132px; }
-      .preview-hero { height: 88px; }
-      .preview-blob { height: 55px; }
+      .work-preview { height: 165px; }
       .work-info { padding: 14px; }
       .contact-panel { grid-template-columns: 1fr; gap: 28px; }
     }
@@ -270,9 +227,6 @@
       .process-grid { grid-template-columns: repeat(2, 1fr); }
       .work-grid { grid-template-columns: 1fr; }
       .work-preview { height: 195px; }
-      .preview-window { width: 83%; height: 148px; }
-      .preview-hero { height: 102px; }
-      .preview-blob { height: 64px; }
       .reason-grid { grid-template-columns: 1fr; }
       .float-one { right: -1%; }
       .float-two { left: -1%; }
@@ -314,16 +268,10 @@
             <a class="button button-primary" href="#lien-he">Nhận báo giá miễn phí <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="#du-an">Xem sản phẩm mẫu</a>
           </div>
-          <div class="trust-row"><span><b class="check">✓</b> Chuẩn mobile</span><span><b class="check">✓</b> Tối ưu tốc độ</span><span><b class="check">✓</b> Hỗ trợ sau bàn giao</span><span><b class="check">✓</b> Kinh nghiệm: [điền số năm]</span></div>
+          <div class="trust-row"><span><b class="check">✓</b> Chuẩn mobile</span><span><b class="check">✓</b> Tối ưu tốc độ</span><span><b class="check">✓</b> Hỗ trợ sau bàn giao</span></div>
         </div>
-        <div class="hero-visual reveal" role="img" aria-label="Minh họa giao diện website trên trình duyệt">
-          <div class="browser">
-            <div class="browser-bar"><i class="browser-dot"></i><i class="browser-dot"></i><i class="browser-dot"></i><div class="browser-address"></div></div>
-            <div class="mock-page">
-              <div class="mock-nav"><i class="mock-brand"></i><span class="mock-links"><i></i><i></i><i></i></span></div>
-              <div class="mock-hero"><div class="mock-copy"><i class="line"></i><i class="line"></i><i class="line"></i><i class="line"></i><i class="mock-cta"></i></div><div class="mock-photo"></div></div>
-            </div>
-          </div>
+        <div class="hero-visual reveal">
+          <img class="hero-preview" src="assets/projects/hero-preview.png" alt="Giao diện trang chủ Bệnh viện Mắt Sài Gòn với công nghệ LUMO PRO">
           <div class="float-card float-one"><span class="float-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg></span><span><strong>100% responsive</strong><small>Điện thoại · Máy tính</small></span></div>
           <div class="float-card float-two"><span class="float-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18m9-9H3"></path></svg></span><span><strong>Thiết kế theo mục tiêu</strong><small>Đúng nhu cầu kinh doanh</small></span></div>
         </div>
@@ -358,11 +306,11 @@
 
     <section class="section section-soft" id="du-an">
       <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">Sản phẩm mẫu</p><h2>Giao diện được làm để phục vụ mục tiêu.</h2><p>Các concept dưới đây là placeholder minh họa. Thay bằng ảnh chụp dự án thật, tên khách hàng (nếu được phép) và kết quả đã xác thực.</p></div>
+        <div class="section-heading reveal"><p class="eyebrow">Sản phẩm mẫu</p><h2>Giao diện được làm để phục vụ mục tiêu.</h2><p>Một số giao diện mẫu cho các lĩnh vực mỹ phẩm, thời trang và dịch vụ địa phương.</p></div>
         <div class="work-grid">
-          <article class="work-card reveal"><div class="work-preview" role="img" aria-label="Placeholder ảnh website mỹ phẩm"><div class="preview-window"><div class="preview-head"><i class="preview-logo"></i><span class="preview-menu"><i></i><i></i><i></i></span></div><div class="preview-hero"><span class="preview-lines"><i></i><i></i><i></i></span><i class="preview-blob"></i></div></div><span class="replace-note">Thay ảnh dự án thật</span></div><div class="work-info"><h3>Landing page mỹ phẩm</h3><p>Bố cục giới thiệu lợi ích, thành phần và CTA đặt hàng.</p><span class="result">Kết quả: thêm số liệu chuyển đổi đã xác thực</span></div></article>
-          <article class="work-card reveal"><div class="work-preview" role="img" aria-label="Placeholder ảnh cửa hàng thời trang"><div class="preview-window"><div class="preview-head"><i class="preview-logo"></i><span class="preview-menu"><i></i><i></i><i></i></span></div><div class="preview-hero"><span class="preview-lines"><i></i><i></i><i></i></span><i class="preview-blob"></i></div></div><span class="replace-note">Thay ảnh dự án thật</span></div><div class="work-info"><h3>Shop thời trang trực tuyến</h3><p>Danh mục sản phẩm, bộ sưu tập và trải nghiệm mua sắm.</p><span class="result">Kết quả: thêm kết quả thực tế tại đây</span></div></article>
-          <article class="work-card reveal"><div class="work-preview" role="img" aria-label="Placeholder ảnh website dịch vụ"><div class="preview-window"><div class="preview-head"><i class="preview-logo"></i><span class="preview-menu"><i></i><i></i><i></i></span></div><div class="preview-hero"><span class="preview-lines"><i></i><i></i><i></i></span><i class="preview-blob"></i></div></div><span class="replace-note">Thay ảnh dự án thật</span></div><div class="work-info"><h3>Website dịch vụ địa phương</h3><p>Thông tin dịch vụ, quy trình và cách đặt lịch rõ ràng.</p><span class="result">Kết quả: bổ sung phản hồi khách hàng thật</span></div></article>
+          <article class="work-card reveal"><div class="work-preview"><img src="assets/projects/cosmetics-landing.png" alt="Giao diện landing page serum Lumière Skin"></div><div class="work-info"><h3>Landing page mỹ phẩm</h3><p>Bố cục giới thiệu lợi ích, thành phần và CTA đặt hàng.</p><span class="result">Trang sản phẩm và đặt hàng</span></div></article>
+          <article class="work-card reveal"><div class="work-preview"><img src="assets/projects/fashion-store.png" alt="Giao diện cửa hàng thời trang Maison Noa"></div><div class="work-info"><h3>Shop thời trang trực tuyến</h3><p>Danh mục sản phẩm, bộ sưu tập và trải nghiệm mua sắm.</p><span class="result">Danh mục và bộ sưu tập</span></div></article>
+          <article class="work-card reveal"><div class="work-preview"><img src="assets/projects/local-service.png" alt="Giao diện dịch vụ vệ sinh nhà FreshNest Cleaning"></div><div class="work-info"><h3>Website dịch vụ địa phương</h3><p>Thông tin dịch vụ, quy trình và cách đặt lịch rõ ràng.</p><span class="result">Đặt lịch dịch vụ trực tuyến</span></div></article>
         </div>
       </div>
     </section>
@@ -419,12 +367,11 @@
     <section class="section" id="lien-he">
       <div class="container">
         <div class="contact-panel reveal">
-          <div><p class="eyebrow">Bắt đầu dự án của bạn</p><h2>Kể tôi nghe bạn muốn xây dựng điều gì.</h2><p class="contact-intro">Gửi vài thông tin cơ bản về sản phẩm và mục tiêu. Tôi sẽ phản hồi để trao đổi phạm vi, thời gian và báo giá phù hợp.</p><div class="button-row"><a class="button button-primary" href="mailto:son@example.com?subject=Y%C3%AAu%20c%E1%BA%A7u%20b%C3%A1o%20gi%C3%A1%20website">Nhận báo giá qua email <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://zalo.me/0000000000" target="_blank" rel="noopener noreferrer">Nhắn Zalo</a></div></div>
+          <div><p class="eyebrow">Bắt đầu dự án của bạn</p><h2>Kể tôi nghe bạn muốn xây dựng điều gì.</h2><p class="contact-intro">Gửi vài thông tin cơ bản về sản phẩm và mục tiêu. Tôi sẽ phản hồi để trao đổi phạm vi, thời gian và báo giá phù hợp.</p><div class="button-row"><a class="button button-primary" href="mailto:longson20062003@gmail.com?subject=Y%C3%AAu%20c%E1%BA%A7u%20b%C3%A1o%20gi%C3%A1%20website">Nhận báo giá qua email <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://wa.me/84528112635" target="_blank" rel="noopener noreferrer">Nhắn WhatsApp</a></div></div>
           <div class="contact-options" aria-label="Thông tin liên hệ">
-            <a class="contact-link" href="mailto:son@example.com"><span><small>Email</small><strong>son@example.com</strong></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"></path><path d="m4 7 8 6 8-6"></path></svg></a>
-            <a class="contact-link" href="https://zalo.me/0000000000" target="_blank" rel="noopener noreferrer"><span><small>Zalo / WhatsApp</small><strong>[Thay số điện thoại của bạn]</strong></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10l4 4v10l-4 4H7l-4-4V7z"></path><path d="M8 9h8l-8 6h8"></path></svg></a>
-            <a class="contact-link" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"><span><small>LinkedIn / Portfolio</small><strong>[Thay bằng hồ sơ của bạn]</strong></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M8 10v7m0-10v.01M12 17v-7m0 3a3 3 0 0 1 6 0v4"></path></svg></a>
-            <p class="response-note">⏱ Cam kết mẫu: phản hồi trong 1 ngày làm việc — hãy chỉnh theo lịch thực tế của bạn.</p>
+            <a class="contact-link" href="mailto:longson20062003@gmail.com"><span><small>Email</small><strong>longson20062003@gmail.com</strong></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"></path><path d="m4 7 8 6 8-6"></path></svg></a>
+            <a class="contact-link" href="https://wa.me/84528112635" target="_blank" rel="noopener noreferrer"><span><small>WhatsApp</small><strong>+84 52 811 2635</strong></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10l4 4v10l-4 4H7l-4-4V7z"></path><path d="M8 9h8l-8 6h8"></path></svg></a>
+            <a class="contact-link" href="https://www.linkedin.com/in/son-nguy%E1%BB%85n-a25862389" target="_blank" rel="noopener noreferrer"><span><small>LinkedIn</small><strong>linkedin.com/in/son-nguyễn-a25862389</strong></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M8 10v7m0-10v.01M12 17v-7m0 3a3 3 0 0 1 6 0v4"></path></svg></a>
           </div>
         </div>
       </div>
@@ -460,7 +407,6 @@
         "Chuẩn mobile": "Mobile-ready",
         "Tối ưu tốc độ": "Speed optimized",
         "Hỗ trợ sau bàn giao": "Post-launch support",
-        "Kinh nghiệm: [điền số năm]": "Experience: [add years]",
         "Minh họa giao diện website trên trình duyệt": "Illustration of a website displayed in a browser",
         "Điện thoại · Máy tính": "Mobile · Desktop",
         "Thiết kế theo mục tiêu": "Built around your goals",
@@ -497,20 +443,16 @@
         "Bàn giao & hỗ trợ": "Launch & support",
         "Hướng dẫn quản trị, bàn giao và hỗ trợ theo gói.": "Provide admin training, hand over the site, and support you as agreed.",
         "Giao diện được làm để phục vụ mục tiêu.": "Designs built to deliver results.",
-        "Các concept dưới đây là placeholder minh họa. Thay bằng ảnh chụp dự án thật, tên khách hàng (nếu được phép) và kết quả đã xác thực.": "The concepts below are placeholders. Replace them with real project screenshots, client names (with permission), and verified results.",
-        "Placeholder ảnh website mỹ phẩm": "Cosmetics website image placeholder",
-        "Placeholder ảnh cửa hàng thời trang": "Fashion store image placeholder",
-        "Placeholder ảnh website dịch vụ": "Service website image placeholder",
-        "Thay ảnh dự án thật": "Replace with real project image",
+        "Một số giao diện mẫu cho các lĩnh vực mỹ phẩm, thời trang và dịch vụ địa phương.": "A selection of sample designs for cosmetics, fashion, and local services.",
         "Landing page mỹ phẩm": "Cosmetics landing page",
         "Bố cục giới thiệu lợi ích, thành phần và CTA đặt hàng.": "A layout highlighting benefits, ingredients, and a clear order CTA.",
-        "Kết quả: thêm số liệu chuyển đổi đã xác thực": "Result: add verified conversion metrics",
+        "Trang sản phẩm và đặt hàng": "Product and ordering page",
         "Shop thời trang trực tuyến": "Online fashion store",
         "Danh mục sản phẩm, bộ sưu tập và trải nghiệm mua sắm.": "Product categories, collections, and a streamlined shopping experience.",
-        "Kết quả: thêm kết quả thực tế tại đây": "Result: add a real project outcome",
+        "Danh mục và bộ sưu tập": "Categories and collections",
         "Website dịch vụ địa phương": "Local service website",
         "Thông tin dịch vụ, quy trình và cách đặt lịch rõ ràng.": "Clear service information, process details, and booking options.",
-        "Kết quả: bổ sung phản hồi khách hàng thật": "Result: add genuine customer feedback",
+        "Đặt lịch dịch vụ trực tuyến": "Online service booking",
         "Gói tham khảo": "Packages",
         "Chọn điểm bắt đầu phù hợp.": "Choose the right place to start.",
         "Mức giá và thời gian bên dưới chỉ là mẫu để bạn điều chỉnh theo phạm vi, công nghệ và năng lực thực tế.": "Prices and timelines below are examples. Adjust them to match your actual scope, tools, and availability.",
@@ -583,11 +525,8 @@
         "Kể tôi nghe bạn muốn xây dựng điều gì.": "Tell me what you'd like to build.",
         "Gửi vài thông tin cơ bản về sản phẩm và mục tiêu. Tôi sẽ phản hồi để trao đổi phạm vi, thời gian và báo giá phù hợp.": "Send a few details about your product and goals. I'll get back to discuss the scope, timeline, and a suitable quote.",
         "Nhận báo giá qua email": "Request a quote by email",
-        "Nhắn Zalo": "Message on Zalo",
+        "Nhắn WhatsApp": "Message on WhatsApp",
         "Thông tin liên hệ": "Contact information",
-        "[Thay số điện thoại của bạn]": "[Add your phone number]",
-        "[Thay bằng hồ sơ của bạn]": "[Add your profile link]",
-        "⏱ Cam kết mẫu: phản hồi trong 1 ngày làm việc — hãy chỉnh theo lịch thực tế của bạn.": "⏱ Sample response time: within 1 business day — update to match your availability.",
         "Nguyễn Viết Long Sơn. Thiết kế & phát triển website.": "Nguyễn Viết Long Sơn. Website design & development.",
         "Lên đầu trang ↑": "Back to top ↑",
         "Bật chế độ tối": "Enable dark mode",
@@ -658,15 +597,15 @@
           ? "Nguyễn Viết Long Sơn, back to top"
           : "Nguyễn Viết Long Sơn, về đầu trang");
         document.querySelector(".nav").setAttribute("aria-label", isEnglish ? "Main navigation" : "Điều hướng chính");
-        document.querySelector(".hero-visual").setAttribute("aria-label", isEnglish
-          ? "Illustration of a website displayed in a browser"
-          : "Minh họa giao diện website trên trình duyệt");
+        document.querySelector(".hero-preview").alt = isEnglish
+          ? "Saigon Eye Hospital homepage featuring LUMO PRO technology"
+          : "Giao diện trang chủ Bệnh viện Mắt Sài Gòn với công nghệ LUMO PRO";
         document.querySelector(".contact-options").setAttribute("aria-label", isEnglish ? "Contact information" : "Thông tin liên hệ");
-        document.querySelectorAll(".work-preview").forEach((preview, index) => {
+        document.querySelectorAll(".work-preview img").forEach((image, index) => {
           const labels = isEnglish
-            ? ["Cosmetics website image placeholder", "Fashion store image placeholder", "Service website image placeholder"]
-            : ["Placeholder ảnh website mỹ phẩm", "Placeholder ảnh cửa hàng thời trang", "Placeholder ảnh website dịch vụ"];
-          preview.setAttribute("aria-label", labels[index]);
+            ? ["Lumière Skin serum landing page design", "Maison Noa fashion store design", "FreshNest Cleaning home cleaning service website"]
+            : ["Giao diện landing page serum Lumière Skin", "Giao diện cửa hàng thời trang Maison Noa", "Giao diện dịch vụ vệ sinh nhà FreshNest Cleaning"];
+          image.alt = labels[index];
         });
         document.querySelectorAll(".stars").forEach((stars) => stars.setAttribute("aria-label", isEnglish ? "5 out of 5 stars" : "5 trên 5 sao"));
         document.title = metadata[language].title;
@@ -674,9 +613,9 @@
         document.querySelector('meta[property="og:locale"]').content = metadata[language].ogLocale;
         document.querySelector('meta[property="og:title"]').content = metadata[language].ogTitle;
         document.querySelector('meta[property="og:description"]').content = metadata[language].ogDescription;
-        document.querySelector('a[href^="mailto:son@example.com?"]').href = isEnglish
-          ? "mailto:son@example.com?subject=Website%20project%20quote%20request"
-          : "mailto:son@example.com?subject=Y%C3%AAu%20c%E1%BA%A7u%20b%C3%A1o%20gi%C3%A1%20website";
+        document.querySelector('.contact-panel .button-primary[href^="mailto:"]').href = isEnglish
+          ? "mailto:longson20062003@gmail.com?subject=Website%20project%20quote%20request"
+          : "mailto:longson20062003@gmail.com?subject=Y%C3%AAu%20c%E1%BA%A7u%20b%C3%A1o%20gi%C3%A1%20website";
         languageButton.dataset.language = language;
       }
 
